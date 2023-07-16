@@ -1,13 +1,15 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-import Item from "./Item";
 
 /* eslint-disable react/no-unescaped-entities */
-const Form = () => {
+const Form = ({ onAddItems }) => {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (!description) return null;
 
     const newItem = {
       quantity,
@@ -15,6 +17,8 @@ const Form = () => {
       packed: false,
       id: Date.now(),
     };
+
+    onAddItems(newItem);
 
     setDescription("");
     setQuantity(1);

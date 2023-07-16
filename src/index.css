@@ -65,6 +65,17 @@ input {
   cursor: pointer;
 }
 
+.btn {
+  background-color: transparent;
+  padding: 1rem;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.btn:hover {
+  color: orangered;
+}
+
 .add-form button {
   text-transform: uppercase;
   background-color: #76c7ad;
@@ -94,7 +105,7 @@ input {
 .list ul {
   list-style: none;
   width: 80%;
-  overflow: scroll;
+  /* overflow: scroll; */
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,6 +124,7 @@ input[type="checkbox"] {
   height: 2rem;
   width: 2rem;
   accent-color: #e5771f;
+  margin-right: 5px;
 }
 
 .list li button {
